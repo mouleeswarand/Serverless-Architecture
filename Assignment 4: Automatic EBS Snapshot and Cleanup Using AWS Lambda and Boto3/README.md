@@ -10,11 +10,11 @@ We going to take a Backup snapshot automatically and deletes old snapshots older
 4) CloudWatch for Logs
 
 ## Instructions
-1) Navigate to EC2 Instance -> Volumes
-2) Copy the Volume ID to take a Snapshot Backup
+### 1) Navigate to EC2 Instance -> Volumes
+### 2) Copy the Volume ID to take a Snapshot Backup
    `Volume ID: vol-09a88c1d726fb1498`
 
-3) Provide proper permisssion in IAM Roles and policy so that Lambda can able to `Describe the EC2 Instance`
+### 3) Provide proper permisssion in IAM Roles and policy so that Lambda can able to `Describe the EC2 Instance`
 
    ### IAM ROLE and POLICY
    
@@ -26,7 +26,7 @@ We going to take a Backup snapshot automatically and deletes old snapshots older
 
 
 
-5) Create a New Lambda function and Map the Roles and implement the Python code with Boto3 to take the shanpshot of the volume 
+### 4) Create a New Lambda function and Map the Roles and implement the Python code with Boto3 to take the shanpshot of the volume 
    
    `Function Name: ebs-snapshot-cleanup`
    
@@ -35,9 +35,9 @@ We going to take a Backup snapshot automatically and deletes old snapshots older
    `Execution role: lambda-ebs-snapshot-role` 
   
    
-6)  Finally Deploy and Test the code that should take the snapshot of the volume and to delete the unused snapshot
+### 5)  Finally Deploy and Test the code that should take the snapshot of the volume and to delete the unused snapshot
 
-   ###Deploy the Python Code `lambda_function.py`
+   ### Deploy the Python Code `lambda_function.py`
    
       import boto3
       from datetime import datetime, timezone, timedelta
@@ -100,7 +100,7 @@ We going to take a Backup snapshot automatically and deletes old snapshots older
 
 
 
-5)  Check the Snapshot 
+### 6)  Check the Snapshot 
    <img width="1470" height="152" alt="image" src="https://github.com/user-attachments/assets/506ddde8-9400-45ea-8e2e-b3f562d47d71" />
 
 
@@ -113,7 +113,7 @@ As per the Output We have created a automatic snapshot using Lambda Function and
 
 <img width="1470" height="152" alt="image" src="https://github.com/user-attachments/assets/3488077b-8c88-470c-833b-8ca0cfca9885" />
 
-6) To Delete the snapshot Changing the `RETENTION_DAYS = 0` this will delete the currently created snapshot and I will change it back to `RETENTION_DAYS = 30`
+### 7) To Delete the snapshot Changing the `RETENTION_DAYS = 0` this will delete the currently created snapshot and I will change it back to `RETENTION_DAYS = 30`
 
 ## Test Code
 <img width="971" height="392" alt="image" src="https://github.com/user-attachments/assets/ee924e83-9478-450a-ac2c-0c441227ad90" />
