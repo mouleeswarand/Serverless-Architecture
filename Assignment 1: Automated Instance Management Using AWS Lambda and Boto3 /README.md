@@ -1,7 +1,7 @@
 # Assignment 1: Automated Instance Management Using AWS Lambda and Boto3
 
 ## Short Summary
-The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We are going to automate this using Lambda function with proper IAM roles to it
+The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We are going to automate using Lambda function with proper IAM roles to it
 
 ## AWS Service used
 1) EC2 Instances
@@ -10,7 +10,7 @@ The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We a
 4) CloudWatch for Logs
 
 ## Instructions
-1) Create a 2 EC2 Instances and Tag the name (Auto-Start / Auto-Stop)
+### 1) Create a 2 EC2 Instances and Tag the name (Auto-Start / Auto-Stop)
 
    ### EC2 Instance 1 - TAG:
    
@@ -31,7 +31,7 @@ The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We a
 <img width="817" height="643" alt="image" src="https://github.com/user-attachments/assets/bd5edc91-996e-4290-9f51-a0a08ec1f324" />
 
    
-2) Provide proper permisssion in IAM Roles and policy so that Lambda can able to `Describe the EC2 Instance and to Check for the Logs`
+### 2) Provide proper permisssion in IAM Roles and policy so that Lambda can able to `Describe the EC2 Instance and to Check for the Logs`
 
    ### IAM ROLE and POLICY
    
@@ -41,7 +41,7 @@ The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We a
 
    <img width="1267" height="456" alt="image" src="https://github.com/user-attachments/assets/05321b90-ba0d-47aa-97a3-bbf44266f87c" />
 
-3) Create a New Lambda function and Map the Roles and implement the Python code with Boto3
+### 3) Create a New Lambda function and Map the Roles and implement the Python code with Boto3
    
    `Function Name: ec2-auto-start-stop`
    
@@ -50,9 +50,9 @@ The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We a
    `Execution role: lambda-ec2-start-stop-role` 
   
    
-4)  Finally Deploy and Test the code that should automate the EC2 Instance Auto-Start / Auto- Stop
+### 4)  Finally Deploy and Test the code that should automate the EC2 Instance Auto-Start / Auto- Stop
 
-   ###Deploy the Python Code `lambda_function.py`
+   ### Deploy the Python Code `lambda_function.py`
 
 
     import boto3
@@ -99,7 +99,7 @@ The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We a
     ## Test the Code
     <img width="323" height="243" alt="image" src="https://github.com/user-attachments/assets/9e86a835-564a-4854-a14a-50689407d5b2" />
 
-5)  Check the EC2 Instance Status
+### 5)  Check the EC2 Instance Status
    <img width="568" height="183" alt="image" src="https://github.com/user-attachments/assets/975cdf12-1a19-4258-85bb-e48ab39bd2fc" />
 
 
