@@ -10,7 +10,7 @@ The Goal here is to Cleanup the files and folders inside the bucket. We are goin
 4) CloudWatch for Logs
 
 ## Instructions
-1) Create a S3 Bucket and upload some test files
+### 1. Create a S3 Bucket and upload some test files
 
    ### S3 Bucket Information
    `Bucket Name: s3-cleanup-demo1`
@@ -19,7 +19,7 @@ The Goal here is to Cleanup the files and folders inside the bucket. We are goin
 
 
    
-3) Provide proper permisssion in IAM Roles and policy so that Lambda can able to `Describe the EC2 Instance and to Check for the Logs`
+### 2. Provide proper permisssion in IAM Roles and policy so that Lambda can able to `Describe the EC2 Instance and to Check for the Logs`
 
    ### IAM ROLE and POLICY
    
@@ -30,7 +30,7 @@ The Goal here is to Cleanup the files and folders inside the bucket. We are goin
    <img width="614" height="480" alt="image" src="https://github.com/user-attachments/assets/1d52fef0-a5ce-49bd-bcae-076860960127" />
 
 
-4) Create a New Lambda function and Map the Roles and implement the Python code with Boto3 to delete the older files from S3 Bucket
+### 3. Create a New Lambda function and Map the Roles and implement the Python code with Boto3 to delete the older files from S3 Bucket
    
    `Function Name: s3-old-file-cleanup`
    
@@ -39,7 +39,7 @@ The Goal here is to Cleanup the files and folders inside the bucket. We are goin
    `Execution role: lambda-s3-cleanup-role` 
   
    
-5)  Finally Deploy and Test the code that should delete the files and folders from S3 Bucket
+### 4.  Finally Deploy and Test the code that should delete the files and folders from S3 Bucket
 
    ###Deploy the Python Code `lambda_function.py`
    
@@ -83,7 +83,7 @@ The Goal here is to Cleanup the files and folders inside the bucket. We are goin
 
 
 
-5)  Check the S3 Bucket Status
+### 5.  Check the S3 Bucket Status
    <img width="1339" height="337" alt="image" src="https://github.com/user-attachments/assets/706955d4-60e5-4438-a2d0-316b707eaa0d" />
 
 
