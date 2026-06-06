@@ -41,7 +41,7 @@ The Goal here is to Start and Stop the EC2 Instances based on the EC2 Tags. We a
 
    <img width="1267" height="456" alt="image" src="https://github.com/user-attachments/assets/05321b90-ba0d-47aa-97a3-bbf44266f87c" />
 
-3) Create a New Lambda function and Map the Roles and implement the Python code
+3) Create a New Lambda function and Map the Roles and implement the Python code with Boto3
    
    `Function Name: ec2-auto-start-stop`
    
