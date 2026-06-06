@@ -80,6 +80,9 @@ The Lambda function uses Python Boto3 to retrieve the instance ID from the event
                 'message': str(error)
             }
    ```
+
+<img width="1349" height="641" alt="image" src="https://github.com/user-attachments/assets/6616f298-623c-4565-9ca7-05e310998c64" />
+
 ## Deploy the Lambda Function
 
   ### EC2 Instance - Before the Lambda function 
