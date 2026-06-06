@@ -41,7 +41,7 @@ The Goal here is to Cleanup the files and folders inside the bucket. We are goin
    
 ### 4.  Finally Deploy and Test the code that should delete the files and folders from S3 Bucket
 
-   ###Deploy the Python Code `lambda_function.py`
+   ### Deploy the Python Code `lambda_function.py`
    
     import boto3
     from datetime import datetime, timezone, timedelta
